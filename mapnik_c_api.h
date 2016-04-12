@@ -52,6 +52,8 @@ MAPNIKCAPICALL void mapnik_image_blob_free(mapnik_image_blob_t * b);
 
 MAPNIKCAPICALL mapnik_image_blob_t * mapnik_image_to_png_blob(mapnik_image_t * i);
 
+MAPNIKCAPICALL char*
+mapnik_image_data(mapnik_image_t * i, const char* format, unsigned int* len);
 
 
 //  Map
@@ -68,6 +70,8 @@ MAPNIKCAPICALL const char * mapnik_map_get_srs(mapnik_map_t * m);
 MAPNIKCAPICALL int mapnik_map_set_srs(mapnik_map_t * m, const char* srs);
 
 MAPNIKCAPICALL int mapnik_map_load(mapnik_map_t * m, const char* stylesheet);
+MAPNIKCAPICALL int
+mapnik_map_load_string(mapnik_map_t * m, const char* stylesheet_str);
 
 MAPNIKCAPICALL int mapnik_map_zoom_all(mapnik_map_t * m);
 
